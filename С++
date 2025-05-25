@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int row, column;
+
+    // Input coordinates
+    cout << "Please choose the row (1-8): ";
+    cin >> row;
+    cout << "Please choose the column (1-8): ";
+    cin >> column;
+
+    // Check if coordinates are valid
+    if (row < 1 || row > 8 || column < 1 || column > 8) {
+        cout << "Invalid coordinates. Please enter numbers from 1 to 8." << endl;
+        return 1;
+    }
+
+    // Determine the color of the cell
+    if ((row + column) % 2 == 0) {
+        cout << "This is a white cell." << endl;
+    } else {
+        cout << "This is a black cell." << endl;
+    }
+
+    return 0;
+}
